@@ -10,6 +10,7 @@
 <body>
 
     <div id="container">
+    <h1>Новый счёт</h1>
     <div class="menu">
         <span>Тип счета</span>
         <select name="billType" id="billType">
@@ -29,7 +30,7 @@
         <label for="passportID"> Введите номер паспорта</label>
         <input type="text" id="passportID" required>
     </div>
-    <div class="menu">
+    <div class="menu" id="cardType">
         <span>Тип карты</span>
         <select name="cardType" id="cardType">
             <option value="one" selected>Visa</option>
@@ -37,16 +38,33 @@
             <option value="three">Пуховичи Card</option>
         </select>
     </div>
-    <div class="menu">
+    <div class="menu" id="currencyType">
         <span>Валюта</span>
-        <select name="currencyType" id="currencyType">
+        <select name="currencyType" >
             <option value="one" selected>USD</option>
             <option value="two">Euro</option>
             <option value="three">Рупии</option>
             <option value="four">Бундесшилинги</option>
         </select>
-        </div>
-    
+    </div>
+    <div class="menu" > 
+        <span>Процент</span> 
+        <select name="percentValue" id="percentValue"> 
+            <option value="one" selected>1 %</option> 
+            <option value="two">2%</option> 
+            <option value="three">5%</option> 
+            <option value="four">10%</option> 
+        </select> 
+    </div>
+    <div class="menu" > 
+        <span>Срок снятия</span> 
+        <select name="withdrawalDate" id="withdrawalDate" > 
+            <option value="one" selected>Месяц</option> 
+            <option value="two">Пол года</option> 
+            <option value="three">Год</option> 
+            <option value="four">Пять лет</option> 
+        </select> 
+    </div>
     
 
 
@@ -56,8 +74,11 @@
 
     </div>
 
-
-
+   
 <script src="script.js"></script>
 </body>
 </html>
+
+
+
+

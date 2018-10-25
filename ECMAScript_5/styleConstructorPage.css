@@ -4,9 +4,20 @@
 
 .menu {
     margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
 }
 
 button{
     margin-top: 20px;
-    margin-left: 20px
+    margin-left: 20px;
+    height: 30px;
+    width: 100px;
+    background: #00BFFF;
+    color: #FFFFFF;
+}
+
+
+option {
+    width: 173px;
 }
