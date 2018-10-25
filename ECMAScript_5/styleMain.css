@@ -1,0 +1,21 @@
+#create {
+    height: 30px;
+    width: 100px;
+    background: #00BFFF;
+    color: #FFFFFF;
+    margin-top: 20px;
+}
+
+
+#tableBill {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 20px;
+    table-layout: fixed;
+}
+
+#tableBill th {
+    border: 1px solid black;
+    padding: 5px;
+
+}

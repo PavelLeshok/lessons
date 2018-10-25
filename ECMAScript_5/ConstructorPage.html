@@ -4,9 +4,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <link rel="stylesheet" href="styleConstructorPage.css">
+    <title>New bill</title>
 </head>
 <body>
+
+    <div id="container">
+    <div class="menu">
+        <span>Тип счета</span>
+        <select name="billType" id="billType">
+            <option value="one" selected>Расчётный счёт</option>
+            <option value="two">Накопительный счёт</option>
+        </select>
+    </div>
+    <div class="menu">
+        <label for="userName"> Введите имя</label>
+        <input type="text" id="userName" required>
+    </div>
+    <div class="menu">
+        <label for="userSurname"> Введите фамилию</label>
+        <input type="text" id="userSurname" required>
+    </div>
+    <div class="menu">
+        <label for="passportID"> Введите номер паспорта</label>
+        <input type="text" id="passportID" required>
+    </div>
+    <div class="menu">
+        <span>Тип карты</span>
+        <select name="cardType" id="cardType">
+            <option value="one" selected>Visa</option>
+            <option value="two">Master Card</option>
+            <option value="three">Пуховичи Card</option>
+        </select>
+    </div>
+    <div class="menu">
+        <span>Валюта</span>
+        <select name="currencyType" id="currencyType">
+            <option value="one" selected>USD</option>
+            <option value="two">Euro</option>
+            <option value="three">Рупии</option>
+            <option value="four">Бундесшилинги</option>
+        </select>
+        </div>
     
+    
+
+
+
+    <button id="save">Сохранить</button>
+    <button id="clear">Очистить</button>
+
+    </div>
+
+
+
+<script src="script.js"></script>
 </body>
 </html>
