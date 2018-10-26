@@ -38,44 +38,46 @@ document.getElementById('billType').addEventListener("change", change)
 
 
 
-function Bill(/*number, pin, balance, createDate, userName, userSurname, passportID */){
+function Bill(userName, userSurname, passportID){
  this.number = ++Bill.counter;
  this.pin = (function(){
-    return Math.floor(Math.random() * (9999 - 1111) + 1111)
+    return Math.floor(Math.random() * (9999 - 1111) + 1111);
 })();
  this.date = (function(){
     let date = new Date();
-     return `${date.getDate()}.${date.getMonth() + 1}.${date.getFullYear()}`
+     return `${date.getDate()}.${date.getMonth() + 1}.${date.getFullYear()}`;
  })();
- /*
- this.createDate = createDate;
- this.userName = userName;
- this.userSurname = userSurname;
- this.passportID = passportID;
- this.balance = balance; */
- 
-
-
-
+this.userName = userName;
+this.userSurname = userSurname;
+this.passportID = passportID;
 }
 
 Bill.counter = 0;
 Bill.getCount = function(){
-    return counter
+    return counter;
+}
+
+
+function CalcBill(cardType, currencyType){
+    Bill.call(this);
+    this.cardType = cardType;
+    this.currencyType = currencyType;
+
+}
+
+function AccumBill(percentValue, ){
+    Bill.call(this);
+
+
 }
 
 
 
 
-let bill = new Bill();
-let bill1 = new Bill();
-let bill2 = new Bill();
 
-console.log(bill.date);
-console.log(bill1.pin);
 
-console.log(bill.number);
-console.log(bill1.number)
+
+
 
 
 
