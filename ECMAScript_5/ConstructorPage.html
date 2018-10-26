@@ -14,7 +14,7 @@
     <div class="menu">
         <span>Тип счета</span>
         <select name="billType" id="billType">
-            <option value="zero" selected disabled>Выберите тип счёта</option>
+            <option value="zero" selected>Выберите тип счёта</option>
             <option value="one">Расчётный счёт</option>
             <option value="two">Накопительный счёт</option>
         </select>
@@ -42,7 +42,8 @@
     <div class="menu" >
         <span>Валюта</span>
         <select name="currencyType" id="currencyType">
-            <option value="one" selected>USD</option>
+            <option value="zero" selected>Выберите тип валюты</option>
+            <option value="one" >USD</option>
             <option value="two">Euro</option>
             <option value="three">Рупии</option>
             <option value="four">Бундесшилинги</option>
@@ -51,16 +52,18 @@
     <div class="menu" > 
         <span>Процент</span> 
         <select name="percentValue" id="percentValue"> 
-            <option value="one" selected>1 %</option> 
+            <option value="zero" selected>Выберите размер процента</option> 
+            <option value="one">1 %</option> 
             <option value="two">2%</option> 
             <option value="three">5%</option> 
             <option value="four">10%</option> 
         </select> 
     </div>
     <div class="menu" > 
-        <span>Срок снятия</span> 
-        <select name="withdrawalDate" id="withdrawalDate" > 
-            <option value="one" selected>Месяц</option> 
+        <span>Срок вклада</span> 
+        <select name="withdrawalDate" id="withdrawalDate">
+            <option value="zero" selected disabled>Выберите срок вклада</option> 
+            <option value="one">Месяц</option> 
             <option value="two">Пол года</option> 
             <option value="three">Год</option> 
             <option value="four">Пять лет</option> 
