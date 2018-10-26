@@ -65,11 +65,30 @@ function CalcBill(cardType, currencyType){
 
 }
 
-function AccumBill(percentValue, ){
+function AccumBill(percentValue, depositTerm){
     Bill.call(this);
-
+    this.percentValue = percentValue;
+    this.depositTerm = depositTerm;
 
 }
+let arr = [];
+function newObj(){
+
+   if(document.getElementById('billType').value === 'one'){
+        var obj = new CalcBill(12, 45);
+        obj.userName = document.getElementById('userName').value;
+        obj.userSurname = document.getElementById('userSurname').value;
+        obj.passportID = document.getElementById('passportID').value;
+        
+    }
+    
+   arr.push(obj);
+
+}
+
+    console.log(arr)    
+
+document.getElementById('save').addEventListener("click", newObj)
 
 
 
