@@ -38,16 +38,46 @@ document.getElementById('billType').addEventListener("change", change)
 
 
 
-function Bill(number, pin, balance, createDate, userName, userSurname, passportID ){
+function Bill(number,/* pin, balance, createDate, userName, userSurname, passportID */){
  this.number = number;
- this.pin = pin;
+ 
+ 
+ /*
  this.createDate = createDate;
  this.userName = userName;
  this.userSurname = userSurname;
  this.passportID = passportID;
- this.balance = balance;
+ this.balance = balance; */
+ 
+ let pinCode = function(){
+    return Math.floor(Math.random() * (9999 - 1111))
+};
+this.pin = pinCode();
+ Bill.counter++;
 
 }
+
+
+Bill.counter = 0;
+Bill.getCount = function(){
+    return counter
+}
+
+let bill = new Bill(123);
+console.log(bill.pin)
+let bill1 = new Bill(234);
+console.log(bill1.pin)
+let bill2 = new Bill(334);
+
+
+
+console.log(bill2.pin)
+
+
+
+
+
+
 
 
 
