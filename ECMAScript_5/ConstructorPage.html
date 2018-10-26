@@ -14,7 +14,8 @@
     <div class="menu">
         <span>Тип счета</span>
         <select name="billType" id="billType">
-            <option value="one" selected>Расчётный счёт</option>
+            <option value="zero" selected disabled>Выберите тип счёта</option>
+            <option value="one">Расчётный счёт</option>
             <option value="two">Накопительный счёт</option>
         </select>
     </div>
@@ -30,7 +31,7 @@
         <label for="passportID"> Введите номер паспорта</label>
         <input type="text" id="passportID" required>
     </div>
-    <div class="menu" id="cardType">
+    <div class="menu">
         <span>Тип карты</span>
         <select name="cardType" id="cardType">
             <option value="one" selected>Visa</option>
@@ -38,9 +39,9 @@
             <option value="three">Пуховичи Card</option>
         </select>
     </div>
-    <div class="menu" id="currencyType">
+    <div class="menu" >
         <span>Валюта</span>
-        <select name="currencyType" >
+        <select name="currencyType" id="currencyType">
             <option value="one" selected>USD</option>
             <option value="two">Euro</option>
             <option value="three">Рупии</option>
