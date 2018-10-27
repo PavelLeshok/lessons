@@ -40,32 +40,38 @@ document.getElementById('billType').addEventListener("change", change)
 
 
 function Bill(userName, userSurname, passportID){
- this.number = ++Bill.counter;
- this.pin = (function(){
-    return Math.floor(Math.random() * (9999 - 1111) + 1111);
-})();
- this.date = (function(){
-    let date = new Date();
-     return `${date.getDate()}.${date.getMonth() + 1}.${date.getFullYear()}`;
- })();
-this.userName = userName;
-this.userSurname = userSurname;
-this.passportID = passportID;
+    this.number = ++Bill.counter;
+    this.pin = (function(){
+        return Math.floor(Math.random() * (9999 - 1111) + 1111);
+    })();
+    this.date = (function(){
+        let date = new Date();
+        return `${date.getDate()}.${date.getMonth() + 1}.${date.getFullYear()}`;
+    })();
+    this.userName = userName;
+    this.userSurname = userSurname;
+    this.passportID = passportID;
 
-this.setName = function(name){
-    if(name.match(/[0-9]/) || name === ""){
-        throw('Невалидное имя')
-    } else {
-        this.userName = name
+    this.setName = function(name){
+        if(name.match(/[0-9]/) || name === ""){
+            throw('Невалидное имя')
+        } else {
+            this.userName = name
+        }
     }
-}
-this.getName = function(){
-    return this.userName
-}
-
-
-
-
+    this.getName = function(){
+        return this.userName
+    }
+    this.setSurname = function(surname){
+        if(surname.match(/[0-9]/) || surname === ""){
+            throw('Невалидное имя')
+        } else {
+            this.userSurname = surname
+        }
+    }
+    this.getName = function(){
+        return this.userSurname
+    }
 }
 
 Bill.counter = 0;
