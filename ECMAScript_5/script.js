@@ -64,13 +64,23 @@ function Bill(userName, userSurname, passportID){
     }
     this.setSurname = function(surname){
         if(surname.match(/[0-9]/) || surname === ""){
-            throw('Невалидное имя')
+            throw('Невалидная фамилия')
         } else {
             this.userSurname = surname
         }
     }
     this.getName = function(){
         return this.userSurname
+    }
+    this.setID = function(passport){
+        if(passport.length < 9){
+            throw('Проверьте введенные данные')
+        } else {
+            this.passportID = passport
+        }
+    }
+    this.getID = function(){
+        return this.passportID
     }
 }
 
