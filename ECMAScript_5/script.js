@@ -39,7 +39,7 @@ document.getElementById('billType').addEventListener("change", change)
 
 
 
-function Bill(userName, userSurname, passportID){
+function Bill(){
     this.number = ++Bill.counter;
     this.pin = (function(){
         return Math.floor(Math.random() * (9999 - 1111) + 1111);
