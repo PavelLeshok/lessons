@@ -1,4 +1,8 @@
 
+
+
+
+
 document.body.onload = function(){
     if( document.getElementById('billType').value === 'zero' ){
         document.getElementById('cardType').setAttribute('disabled', 'true');
@@ -31,9 +35,6 @@ document.getElementById('billType').addEventListener("change", change)
 
 
 
-
-
-
         
 
 
@@ -50,12 +51,29 @@ function Bill(userName, userSurname, passportID){
 this.userName = userName;
 this.userSurname = userSurname;
 this.passportID = passportID;
+
+this.setName = function(name){
+    if(name.match(/[0-9]/) || name === ""){
+        throw('Невалидное имя')
+    } else {
+        this.userName = name
+    }
+}
+this.getName = function(){
+    return this.userName
+}
+
+
+
+
 }
 
 Bill.counter = 0;
 Bill.getCount = function(){
     return counter;
 }
+
+
 
 
 function CalcBill(cardType, currencyType){
@@ -71,9 +89,16 @@ function AccumBill(percentValue, depositTerm){
     this.depositTerm = depositTerm;
 
 }
-let arr = [];
-function newObj(){
 
+
+
+
+
+
+
+let arrCalcBill = [];
+let arrAccumBill = [];
+function newObj(){
    if(document.getElementById('billType').value === 'one'){
         var obj = new CalcBill(12, 45);
         obj.userName = document.getElementById('userName').value;
@@ -81,9 +106,8 @@ function newObj(){
         obj.passportID = document.getElementById('passportID').value;
         
     }
-    
-   arr.push(obj);
-
+   arrCalcBill.push(obj);
+   console.log(arr)  
 }
 
     console.log(arr)    
