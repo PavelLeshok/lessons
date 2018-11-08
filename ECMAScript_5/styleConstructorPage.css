@@ -1,23 +1,51 @@
 #container {
-    width: 400px;
+    width: 300px;
+    margin: 0 auto;
 }
 
 .menu {
     margin-top: 20px;
-    display: flex;
-    justify-content: space-between;
+    width: 300px;
+    
+}
+#container h2{
+    text-align: center;
+    color:#696969;
 }
 
+.buttons{
+    display: flex;
+    justify-content: space-around;
+}
 button{
     margin-top: 20px;
-    margin-left: 20px;
-    height: 30px;
-    width: 100px;
-    background: #00BFFF;
+    height: 40px;
+    width: 120px;
+    background: #A9A9A9;
     color: #FFFFFF;
+    outline: #808080;
+    border-radius: 7px
 }
 
 
 option {
     width: 173px;
+    height: 35px;
+    
+}
+
+.menu select{
+    height: 35px;
+    width: 300px;
+    font-size: 20px;
+    
+
+}
+
+.menu input{
+    height: 35px;
+    width: 300px;
+    font-size: 20px;
+    
+
 }

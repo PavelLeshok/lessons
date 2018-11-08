@@ -9,6 +9,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "deployd": "^1.1.2"
+    "deployd": "^1.1.2",
+    "dpd-dashboard": "^1.1.3",
+    "dpd-event-extension": "0.0.3"
   }
 }

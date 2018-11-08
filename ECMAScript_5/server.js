@@ -2,15 +2,9 @@ var deployd = require('deployd');
 
 var server = deployd({
   port: process.env.PORT || 5000,
-  env: 'production',
+  env: process.env.ENVIRONMENT || 'development',
   db: {
-    host: 'my.production.mongo.host',
-    port: 27105,
-    name: 'my-db',
-    credentials: {
-      username: 'username',
-      password: 'password'
-    }
+    connectionString: 'mongodb://127.0.0.1:27017/ECMAScript_5'
   }
 });
 

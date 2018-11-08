@@ -7,15 +7,14 @@ function change(){
         html = ``;
     } else if (document.getElementById('billType').value === 'one'){
         html = ` <div class="menu">
-        <span>Тип карты</span>
         <select name="cardType" id="cardType">
-            <option value="one" selected>Visa</option>
+            <option value="zero" selected>Выберите тип карты</option>
+            <option value="one">Visa</option>
             <option value="two">Master Card</option>
             <option value="three">Пуховичи Card</option>
         </select>
     </div>
     <div class="menu" >
-        <span>Валюта</span>
         <select name="currencyType" id="currencyType">
             <option value="zero" selected>Выберите тип валюты</option>
             <option value="one" >USD</option>
@@ -26,7 +25,6 @@ function change(){
     </div>`
     } else if(document.getElementById('billType').value === 'two'){
         html = `  <div class="menu" > 
-        <span>Процент</span> 
         <select name="percentValue" id="percentValue"> 
             <option value="zero" selected>Выберите размер процента</option> 
             <option value="one">1 %</option> 
@@ -36,7 +34,6 @@ function change(){
         </select> 
     </div>
     <div class="menu" > 
-        <span>Срок вклада</span> 
         <select name="depositTerm" id="depositTerm">
             <option value="zero" selected disabled>Выберите срок вклада</option> 
             <option value="one">Месяц</option> 
@@ -51,22 +48,7 @@ function change(){
 
 }
 
-
-
-
-
-
-
-
-
-
-
 document.getElementById('billType').addEventListener('change', change);
-
-
-    
-
-
 
 function Bill(){
     this.number = ++Bill.counter;

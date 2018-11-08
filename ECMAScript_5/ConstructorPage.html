@@ -10,9 +10,9 @@
 <body>
 
     <div id="container">
-    <h1>Новый счёт</h1>
+        
+    <h2>Регистрация нового счёта</h2>
     <div class="menu">
-        <span>Тип счета</span>
         <select name="billType" id="billType">
             <option value="zero" selected>Выберите тип счёта</option>
             <option value="one">Расчётный счёт</option>
@@ -20,27 +20,29 @@
         </select>
     </div>
     <div class="menu">
-        <label for="userName"> Введите имя</label>
-        <input type="text" id="userName" required>
+        
+        <input type="text" id="userName" placeholder = 'Введите имя'required>
     </div>
     <div class="menu">
-        <label for="userSurname"> Введите фамилию</label>
-        <input type="text" id="userSurname" required>
+        
+        <input type="text" id="userSurname" placeholder = 'Введите фамилию'required>
     </div>
     <div class="menu">
-        <label for="passportID"> Введите номер паспорта</label>
-        <input type="text" id="passportID" required>
+        
+        <input type="text" id="passportID" placeholder  = 'Введите номер паспорта' required>
     </div>
     <div class="changer">
       
     </div>
-   
+        
     
 
 
-
+    <div class="buttons">
     <button id="save">Сохранить</button>
     <button id="clear">Очистить</button>
+    </div>
+    
 
     </div>
 
