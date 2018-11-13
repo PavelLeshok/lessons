@@ -51,18 +51,14 @@ class Bill{
         this.userName = userName;
         this.userSurname = userSurname;
         this.passportID = passportID;
-        this.pin = function(){
+        this.pin = (function(){
             return Math.floor(Math.random() * (9999 - 1111) + 1111);
-        }
+        })();
+        this.date = (function(){
+            let date = new Date();
+            return `${date.getDate()}.${date.getMonth() + 1}.${date.getFullYear()}`;
+        })();
     }
-
-    
-    
-
-    get date(){
-        let date = new Date();
-        return `${date.getDate()}.${date.getMonth() + 1}.${date.getFullYear()}`;
-    };
     set name(name){
         if(name.match(/[0-9]/) || name === ""){
             throw('Невалидное имя')
