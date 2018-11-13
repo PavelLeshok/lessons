@@ -13,19 +13,6 @@
     color:#696969;
 }
 
-.buttons{
-    display: flex;
-    justify-content: space-around;
-}
-button{
-    margin-top: 20px;
-    height: 40px;
-    width: 120px;
-    background: #A9A9A9;
-    color: #FFFFFF;
-    outline: #808080;
-    border-radius: 7px
-}
 
 
 option {
@@ -48,4 +35,25 @@ option {
     font-size: 20px;
     
 
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px
+}
+.buttons a{
+    text-decoration: none;
+    font-size: 20px;
+    line-height: 35px;
+    background: #A9A9A9;
+    color: white;
+    font-weight: 700;
+    padding: 5px 10px;
+    width: 120px;
+    text-align: center;
+}
+.buttons a:hover {
+    background: #696969
 }

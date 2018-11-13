@@ -1,6 +1,3 @@
-
-
-
 function change(){
     let html;
     if( document.getElementById('billType').value === 'zero' ){
@@ -44,53 +41,56 @@ function change(){
     </div>`
     }
     document.querySelector('.changer').innerHTML = html;  
-
-
 }
 
 document.getElementById('billType').addEventListener('change', change);
 
-function Bill(){
-    this.number = ++Bill.counter;
-    this.pin = (function(){
-        return Math.floor(Math.random() * (9999 - 1111) + 1111);
-    })();
-    this.date = (function(){
+class Bill{
+    constructor(userName, userSurname, passportID){
+        this.number = ++Bill.counter;
+        this.userName = userName;
+        this.userSurname = userSurname;
+        this.passportID = passportID;
+        this.pin = function(){
+            return Math.floor(Math.random() * (9999 - 1111) + 1111);
+        }
+    }
+
+    
+    
+
+    get date(){
         let date = new Date();
         return `${date.getDate()}.${date.getMonth() + 1}.${date.getFullYear()}`;
-    })();
-    this.userName = userName;
-    this.userSurname = userSurname;
-    this.passportID = passportID;
-
-    this.setName = function(name){
+    };
+    set name(name){
         if(name.match(/[0-9]/) || name === ""){
             throw('Невалидное имя')
         } else {
             this.userName = name
         }
     }
-    this.getName = function(){
+    get name(){
         return this.userName
     }
-    this.setSurname = function(surname){
+    set surname(surname){
         if(surname.match(/[0-9]/) || surname === ""){
             throw('Невалидная фамилия')
         } else {
             this.userSurname = surname
         }
     }
-    this.getName = function(){
+    get surname(){
         return this.userSurname
     }
-    this.setID = function(passport){
+    set ID(passport){
         if(passport.length < 9){
             throw('Проверьте введенные данные')
         } else {
             this.passportID = passport
         }
     }
-    this.getID = function(){
+    get ID(){
         return this.passportID
     }
 }
@@ -103,43 +103,40 @@ Bill.getCount = function(){
 
 
 
-function CalcBill(cardType, currencyType){
-    Bill.call(this);
-    this.cardType = cardType;
-    this.currencyType = currencyType;
-
-}
-
-function AccumBill(percentValue, depositTerm){
-    Bill.call(this);
-    this.percentValue = percentValue;
-    this.depositTerm = depositTerm;
-
-}
-
-
-
-
-
-
-
-let arrCalcBill = [];
-let arrAccumBill = [];
-function newObj(){
-   if(document.getElementById('billType').value === 'one'){
-        var obj = new CalcBill(12, 45);
-        obj.userName = document.getElementById('userName').value;
-        obj.userSurname = document.getElementById('userSurname').value;
-        obj.passportID = document.getElementById('passportID').value;
-        
+class CalcBill extends Bill{
+    constructor(userName, userSurname, passportID, cardType, currencyType){
+        super(userName, userSurname, passportID);
+        this.cardType = cardType;
+        this.currencyType = currencyType;
     }
-   arrCalcBill.push(obj);
-   console.log(arr)  
 }
 
-    console.log(arr)    
 
-document.getElementById('save').addEventListener("click", newObj)
+class AccumBill extends Bill{
+    constructor(userName, userSurname, passportID, percentValue, depositTerm){
+        super(userName, userSurname, passportID)
+        this.percentValue = percentValue;
+        this.depositTerm = depositTerm;
+    }
+}
+
+let qwe = new CalcBill('Pit', 'Bred', 123, 'qwe', "asd");
+let qwe2 = new CalcBill('Pit', 'Bred', 123, 'qwe', "asd");
+let qwe3 = new CalcBill('Pit', 'Bred', 123, 'qwe', "asd");
+
+console.log(qwe.pin);
+console.log(qwe.pin);
+console.log(qwe2);
+console.log(qwe3);
+
+
+
+
+
+
+
+
+
 
 
 
