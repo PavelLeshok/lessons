@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/css/registration.css">
+    <title>New bill</title>
+</head>
+<body>
+    <div id="container">      
+        <h2>Регистрация нового счёта</h2>
+        <form method="post">
+            <div class="menu">
+                <select name="billType" id="billType">
+                    <option value="zero" selected>Выберите тип счёта</option>
+                    <option value="one">Расчётный счёт</option>
+                    <option value="two">Накопительный счёт</option>
+                </select>
+            </div>
+            <div class="menu">
+                <input type="text" id="userName" placeholder = 'Введите имя'required name = 'userName'>
+            </div>
+            <div class="menu">
+                <input type="text" id="userSurname" placeholder = 'Введите фамилию'required name = 'userSurname'> 
+            </div>
+            <div class="menu">
+                <input type="text" id="passportID" placeholder  = 'Введите номер паспорта' required name = 'passportID'>
+            </div>
+            <div class="changer">
+      
+            </div>
+            <button type="submit" class="submit">Submit registration</button>
+            </form>
+    </div>
+
+   
+<script src="/js/script.js"></script>
+<script src="/js/component.js"></script>
+</body>
+</html>
+
+
+
+
