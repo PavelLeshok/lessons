@@ -52,7 +52,7 @@ Bill.getCount = function(){
 
 
 
-class CalcBill extends Bill{
+class savingsAccount extends Bill{
     constructor(userName, userSurname, passportID, cardType, currencyType){
         super(userName, userSurname, passportID);
         this.cardType = cardType;
@@ -61,7 +61,7 @@ class CalcBill extends Bill{
 }
 
 
-class AccumBill extends Bill{
+class cardAccount extends Bill{
     constructor(userName, userSurname, passportID, percentValue, depositTerm){
         super(userName, userSurname, passportID)
         this.percentValue = percentValue;
@@ -69,14 +69,6 @@ class AccumBill extends Bill{
     }
 }
 
-let qwe = new CalcBill('Pit', 'Bred', 123, 'qwe', "asd");
-let qwe2 = new CalcBill('Pit', 'Bred', 123, 'qwe', "asd");
-let qwe3 = new CalcBill('Pit', 'Bred', 123, 'qwe', "asd");
-
-console.log(qwe.pin);
-console.log(qwe.pin);
-console.log(qwe2);
-console.log(qwe3);
 
 
 

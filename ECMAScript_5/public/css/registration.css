@@ -51,7 +51,15 @@ button.submit:hover{
     cursor: pointer;
 }
 
-button.submit:active {
+button.submit:active{
     border: 1px solid #20911e;
     box-shadow: 0 0 10px 5px #356b0b inset;
+}
+
+
+.cardAccount{
+    display: none;
+}
+.savingsAccount{
+    display: none;
 }
